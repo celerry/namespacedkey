@@ -1,0 +1,13 @@
+{
+    "name": "@celery/namespacedkey",
+    "version": "1.0.0",
+    "exports": "./src/index.ts",
+    "publish": {
+        "include": [
+            "src/**/*.ts",
+            "jsr.json",
+            "README.md",
+            "tests/*.ts"
+        ]
+    }
+}
