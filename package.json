@@ -1,5 +1,5 @@
 {
-  "name": "earthmc",
+  "name": "namespacedkey",
   "module": "index.ts",
   "devDependencies": {
     "@types/bun": "^1.0.11",
@@ -11,7 +11,6 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "dev": "bun run --hot src/index.ts",
     "fmt": "bun x prettier --write \"**/*.ts\""
   },
   "type": "module"

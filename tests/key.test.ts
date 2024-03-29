@@ -1,5 +1,5 @@
-import { expect, test } from "bun:test";
-import NamespacedKey from "index";
+import { expect, test } from "bun:test"
+import NamespacedKey from "index"
 
 test("null values", () => {
     expect(() => {
@@ -33,7 +33,7 @@ test("invalid namespace and key", () => {
     expect(() => {
         new NamespacedKey("foo/bar", "baz")
     }).toThrow("Invalid namespace. Must be [a-z0-9._-]: foo/bar")
-    
+
     expect(() => {
         new NamespacedKey("foo", "bar&baz")
     }).toThrow("Invalid key. Must be [a-z0-9/._-]: bar&baz")

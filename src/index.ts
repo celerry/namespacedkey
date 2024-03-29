@@ -59,7 +59,7 @@ export default class NamespacedKey {
     }
 
     public equals(other: NamespacedKey): boolean {
-        if(other == null) {
+        if (other == null) {
             return false
         }
 
@@ -68,9 +68,9 @@ export default class NamespacedKey {
 
     /**
      * get a random key in a given namespace.
-     * 
-     * @param namespace namespace to create the key in 
-     * @returns new key 
+     *
+     * @param namespace namespace to create the key in
+     * @returns new key
      */
     public static randomKey(namespace: string): NamespacedKey {
         return new NamespacedKey(namespace, crypto.randomUUID().toString())
@@ -83,7 +83,7 @@ export default class NamespacedKey {
      */
     public static fromString(value: string): NamespacedKey {
         const split = value.split(":")
-        if(split.length != 2) {
+        if (split.length != 2) {
             throw new Error(`String ${value} cannot be a NamespacedKey`)
         }
         return new NamespacedKey(split[0], split[1])
